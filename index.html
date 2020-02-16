@@ -25,8 +25,8 @@
         $(document).ready(function(){
             $('#load').on('click', function(){    
                 $.ajax({
-                    url: './images/ajax.html',
-                    type: 'json',
+                    url: '/images/ajax.html',
+                    type: 'json'
                 }).done(function(cavab) {
                     cavab.images.forEach(function(value, index) {
                         $('#siyahi').append('<img src="' + value + '">');
