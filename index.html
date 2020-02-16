@@ -23,14 +23,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $.ajax({
-                url: '/ajax_example/items.html',
-                type: 'JSON',
-            }).done(function(cavab) {
-                cavab.students.forEach(function(value, index) {
-                    $('#siyahi').append('<img src="' + value + '">');
+            $('#load').on('click', function(){    
+                $.ajax({
+                    url: './images/ajax.html',
+                    type: 'json',
+                }).done(function(cavab) {
+                    cavab.students.forEach(function(value, index) {
+                        $('#siyahi').append('<img src="' + value + '">');
+                    });
                 });
-            });
+            })
         });
     </script>
 </body>
