@@ -28,6 +28,7 @@
                     url: '/images/ajax.html',
                     dataType: 'json'
                 }).done(function(cavab) {
+                    $('#siayhi').remove()
                     cavab.images.forEach(function(value, index) {
                         $('#siyahi').append('<img src="' + value + '">');
                     });
