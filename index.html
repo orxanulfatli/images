@@ -28,7 +28,7 @@
                     url: './images/ajax.html',
                     type: 'json',
                 }).done(function(cavab) {
-                    cavab.students.forEach(function(value, index) {
+                    cavab.images.forEach(function(value, index) {
                         $('#siyahi').append('<img src="' + value + '">');
                     });
                 });
